@@ -1,3 +1,3 @@
-# CronOmetro
+# Cronometro
 
 Cronômetro feito utilizando html, css e javascript
