@@ -132,6 +132,10 @@ footer {
         width: 270px;
     }
 
+    .container-tempo {
+        left: 5%;
+    }
+
     .btn {
         position: relative;
         bottom: 50px;
