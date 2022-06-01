@@ -54,7 +54,7 @@ function iniciar(){
     if(ms >= 10){
         msTexto.innerHTML = ms
     }
-    if (ms > 99){
+    if (ms >= 99){
         ms = 0
         s++
     }
