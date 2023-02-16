@@ -103,13 +103,6 @@ p {
     font-size: 1.2em;
 }
 
-
-@media screen and (max-width: 290px){
-    footer {
-        top: 92%;
-    }
-}
-
 @media screen and (max-width: 450px) {
 
     h1{
@@ -124,7 +117,7 @@ p {
     }
 
     span{
-        font-size: 3.5em;
+        font-size: 3em;
     }
 
     .buttons-container{
@@ -143,4 +136,13 @@ p {
         font-size: 1em;
     }
 
+}
+
+@media screen and (max-width: 360px){
+    span{
+        font-size: 2em;
+    }
+    footer {
+        top: 92%;
+    }
 }
