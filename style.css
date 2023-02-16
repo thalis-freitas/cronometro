@@ -32,7 +32,8 @@ h1{
     position: relative;
     left: 10%;
 }
-.container-tempo {
+
+.time-container {
     width: 400px;
     position: fixed;
     left: 10%;
@@ -40,11 +41,11 @@ h1{
 
 span {
     color: white;
-    font-family: 'Teko', sans-serif;
-    font-size: 6em;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 3.5em;
 }
 
-.container-btns{
+.buttons-container{
     width: 365px;
     bottom: 0;
     position: absolute;
@@ -82,7 +83,6 @@ span {
     background-color: red;
 }
 
-
 footer {
     position: fixed;
     top: 95%;
@@ -91,24 +91,24 @@ footer {
     text-shadow: 2px 2px 5px black;
 }
 
-    a {
-        text-decoration: none;
-        color: white;
-    }
+a {
+    text-decoration: none;
+    color: white;
+}
 
-    p {
-        position: relative;
-        display: inline-block;
-        bottom: 5px;
-        font-size: 1.2em;
-    }
+p {
+    position: relative;
+    display: inline-block;
+    bottom: 5px;
+    font-size: 1.2em;
+}
 
 
-    @media screen and (max-width: 290px){
-        footer {
-            top: 92%;
-        }
+@media screen and (max-width: 290px){
+    footer {
+        top: 92%;
     }
+}
 
 @media screen and (max-width: 450px) {
 
@@ -119,20 +119,20 @@ footer {
     }
 
    .container{
-    min-width: 270px;
-    left: 0;
+        min-width: 270px;
+        left: 0;
     }
 
     span{
         font-size: 3.5em;
     }
 
-    .container-btns{
+    .buttons-container{
         left: 0;
         width: 270px;
     }
 
-    .container-tempo {
+    .time-container {
         left: 5%;
     }
 
@@ -144,6 +144,3 @@ footer {
     }
 
 }
-
-
-

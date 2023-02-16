@@ -1,89 +1,86 @@
-var ms = 0
-var s = 0
-var min = 0
-var h = 0
+let ms = 0
+let sec = 0
+let min = 0
+let hrs = 0
+let interval
+let btnStart = document.querySelector('#start')
+let btnPause = document.querySelector('#pause')
+let btnReset = document.querySelector('#reset')
 
-var msTexto = document.getElementById("ms")
-var sTexto = document.getElementById("s")
-var minTexto = document.getElementById("min")
-var hTexto = document.getElementById("h")
-var interval
+btnPause.style.display = 'none'
 
-var btnStart = document.getElementById("start")
-var btnPause = document.getElementById("pause")
+btnStart.addEventListener('click', () => {
+    interval = setInterval(toStart, 10)
+    btnStart.style.display = 'none'
+    btnPause.style.display = 'inline-block'
+})
 
-btnPause.style.display = "none"
-
-function start(){
-    interval = setInterval(iniciar, 10)
-    
-    btnStart.style.display = "none"
-    btnPause.style.display = "inline-block"
-}
-
-function pause(){
+btnPause.addEventListener('click', () => {
     clearInterval(interval)
+    btnPause.style.display = 'none'
+    btnStart.style.display = 'inline-block'
+})
 
-    btnPause.style.display = "none"
-    btnStart.style.display = "inline-block"
-}
+let msElement = document.querySelector('#ms')
+let secElement = document.querySelector('#sec')
+let minElement = document.querySelector('#min')
+let hrsElement = document.querySelector('#hrs')
 
-function reset(){
-    clearInterval(interval)
-
+function returnToZero(){
     ms = 0
-    s = 0
+    sec = 0
     min = 0
-    h = 0
-
-    msTexto.innerHTML = "00"
-    sTexto.innerHTML = "00"
-    minTexto.innerHTML = "00"
-    hTexto.innerHTML = "00"
-
-    btnPause.style.display = "none"
-    btnStart.style.display = "inline-block"
-
+    hrs = 0
+    msElement.innerHTML = '00'
+    secElement.innerHTML = '00'
+    minElement.innerHTML = '00'
+    hrsElement.innerHTML = '00'
 }
 
-function iniciar(){
-    ms++
+btnReset.addEventListener('click', () => {
+    clearInterval(interval)
+    returnToZero()
+    btnPause.style.display = 'none'
+    btnStart.style.display = 'inline-block'
+})
+
+function formatMs(){
     if (ms < 10){
-        msTexto.innerHTML = "0" + ms
-    }
-    if(ms >= 10){
-        msTexto.innerHTML = ms
-    }
-    if (ms >= 99){
+        msElement.innerHTML = '0' + ms
+    }else if (ms >= 10 && ms < 100){
+        msElement.innerHTML = ms
+    }else{
         ms = 0
-        s++
+        sec++
     }
-    if (s < 10){
-        sTexto.innerHTML = "0" + s
-    }
-    if (s >= 10){
-        sTexto.innerHTML = s}
-    if (s > 59){
-        s = 0
+}
+
+function formatSec(){
+    if (sec < 10){
+        secElement.innerHTML = '0' + sec
+    }else if (sec >= 10 && sec < 60){
+        secElement.innerHTML = sec
+    }else{
+        sec = 0
         min++
     }
-    if (min < 10){
-        minTexto.innerHTML = "0" + min
-    }
-    if (min >= 10){
-        minTexto.innerHTML = min
-    }
-    if (min > 59){
-        min = 0
-        h++
-    }
-    if (h < 10){
-        hTexto.innerHTML = "0" + h
-    }
-    if (h >= 10){
-        hTexto.innerHTML = h
-    }
-
 }
 
+function formatMin(){
+    if (min < 10){
+        minElement.innerHTML = '0' + min
+    }else if (min >= 10 && min < 60){
+        minElement.innerHTML = min
+    }else{
+        min = 0
+        hrs++
+    }
+}
 
+function toStart(){
+    ms++
+    formatMs()
+    formatSec()
+    formatMin()
+    hrs < 10 ? hrsElement.innerHTML = '0' + hrs : hrsElement.innerHTML = hrs
+}

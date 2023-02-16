@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,41 +9,36 @@
     <link rel="icon" href="./img/icons8-cronômetro-32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <h1>Cronômetro</h1>        
-    
     <div class="container">
-
-        <div class="container-tempo">
-            <span id="h">00</span>
-            <span class="doisPontos">:</span>
+        <div class="time-container">
+            <span id="hrs">00</span>
+            <span>:</span>
             <span id="min">00</span>
-            <span class="doisPontos">:</span>
-            <span id="s">00</span>
-            <span class="doisPontos">:</span>
+            <span>:</span>
+            <span id="sec">00</span>
+            <span>:</span>
             <span id="ms">00</span>
-
         </div>
-        <div class="container-btns">
-            <button class="btn" id="start" onclick="start()">Start</button>
-            <button class="btn" id="pause" onclick=" pause()">Pause</button>
-            <button class="btn" id="reset" onclick="reset()">Reset</button>
+        <div class="buttons-container">
+            <button class="btn" id="start">Start</button>
+            <button class="btn" id="pause">Pause</button>
+            <button class="btn" id="reset">Reset</button>
         </div>
     </div>
-
-    <footer><a href="https://github.com/Thalis-Freitas" target="_blank"><img src="./img/icons8-github-24.png" alt="">
-        <p> Desenvolvido por: <b>Thalis Freitas </b> </p> </a>
+    <footer>
+        <a href="https://github.com/Thalis-Freitas" target="_blank">
+            <img src="./img/icons8-github-24.png" alt="">
+            <p> Desenvolvido por:
+                <b>Thalis Freitas </b>
+            </p>
+        </a>
     </footer>
-
     <script src="./script.js"></script>
 </body>
-
 </html>
