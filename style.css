@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    position: fixed;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(60deg, #160821, #445b8d, #5d4366, #ff6e01,  #fd3411);
+}
+
+h1{
+    position: relative;
+    top: 13%;
+    left: 10%;
+    width: 365px;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-size: 4em;
+}
+
+.container{
+    top: 15%;
+    height: 180px;
+    min-width: 365px;
+    position: relative;
+    left: 10%;
+}
+.container-tempo {
+    width: 400px;
+    position: fixed;
+    left: 10%;
+}
+
+span {
+    color: white;
+    font-family: 'Teko', sans-serif;
+    font-size: 6em;
+}
+
+.container-btns{
+    width: 365px;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.btn {
+    border-color: transparent;
+    height: 50px;
+    width: 84px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin: -10px 5px 0 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vmin;
+}
+
+#start {
+    background-color: darkgreen;
+}
+#start:hover {
+    background-color: green;
+}
+#pause {
+    background-color: darkblue;
+}
+#pause:hover {
+    background-color: blue;
+}
+#reset {
+    background-color: darkred;
+}
+#reset:hover {
+    background-color: red;
+}
+
+
+footer {
+    position: fixed;
+    top: 95%;
+    left: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    p {
+        position: relative;
+        display: inline-block;
+        bottom: 5px;
+        font-size: 1.2em;
+    }
+
+
+    @media screen and (max-width: 290px){
+        footer {
+            top: 92%;
+        }
+    }
+
+@media screen and (max-width: 450px) {
+
+    h1{
+        left: 0;
+        width: 270px;
+        font-size: 2.5em;
+    }
+
+   .container{
+    min-width: 270px;
+    left: 0;
+    }
+
+    span{
+        font-size: 3.5em;
+    }
+
+    .container-btns{
+        left: 0;
+        width: 270px;
+    }
+
+    .container-tempo {
+        left: 5%;
+    }
+
+    .btn {
+        position: relative;
+        bottom: 50px;
+        margin: 2px;
+        font-size: 1em;
+    }
+
+}
+
+
+
